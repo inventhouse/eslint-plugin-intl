@@ -74,13 +74,10 @@ ToDo
 ----
 - look into eslint-plugin-jsx-a11y for possible techniques/ideas
 
-- identify a plain string
-- distinguish between plain string and string in message
-
 - start identifying different types of strings that should be flagged
     - template literals
-    - aria-label
-    - alt text
+    - DONE: aria-label
+    - DONE: alt text
 
 - identify more distinguishing criteria
     - css class name strings
@@ -91,5 +88,8 @@ DONE: set up skeleton eslint plugin and rule
 
 - DONE: put project in git
 - DONE: figure out how to run eslint with my plugin
+
+- DONE: identify a plain string
+- DONE: distinguish between plain string and string in message
 
 ---
