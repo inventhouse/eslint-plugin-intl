@@ -1,19 +1,19 @@
 # eslint-plugin-intl
 
-Check for strings that should be wrapped for translation by react-intl, but aren&#39;t
+Check for strings that should be wrapped for translation by react-intl, but aren't
 
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
 
 ```
-$ npm i eslint --save-dev
+$ npm install eslint --save-dev
 ```
 
-Next, install `eslint-plugin-intl`:
+Next, install [eslint-plugin-intl](https://github.com/inventhouse/eslint-plugin-intl):
 
 ```
-$ npm install eslint-plugin-intl --save-dev
+$ npm install inventhouse/eslint-plugin-intl --save-dev
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-intl` globally.
@@ -36,16 +36,16 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "intl/rule-name": 2
+        "intl/no-bare-text": ["error"],
+        "intl/i18n-attrs": ["error"]
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-docker-compose exec prospectus sh -c "eslint --rule 'intl/intl-strings: error' --config .eslintrc.base.yaml --no-eslintrc --plugin intl ."
+- **no-bare-text** - Requires that jsx text be wrapped for internationalization by react-intl
+- **i18n-attrs** - Requires that user-facing tag attributes be wrapped for internationalization by react-intl (currently `aria-label` and non-empty `alt`)
 
 
 Notes
@@ -89,7 +89,8 @@ DONE: set up skeleton eslint plugin and rule
 - DONE: put project in git
 - DONE: figure out how to run eslint with my plugin
 
-- DONE: identify a plain string
-- DONE: distinguish between plain string and string in message
+DONE: identify a plain string
+
+DONE: distinguish between plain string and string in message
 
 ---
