@@ -45,11 +45,34 @@ Then configure the rules you want to use under the rules section.
 
 * Fill in provided rules here
 
+docker-compose exec prospectus sh -c "eslint --rule 'intl/intl-strings: error' --config .eslintrc.base.yaml --no-eslintrc --plugin intl ."
+
+
+Notes
+-----
+- exceptions in rules are silently caught and dropped (maybe?)
+
+- __Development__
+    - post to a public GitHub repo
+    - Add to `package.json`: 
+        > `"eslint-plugin-mine": "ghuser/eslint-plugin-mine#branch"`
+    - Add to `.eslintrc`:
+        > ```
+        > "plugins": [
+        >   "mine"
+        > ],
+        > "rules": {
+        >   "mine/my-rule": ["error"]
+        > }
+        > ```
+    - (If already installed) `rm -rf node_modules eslint-plugin-mine`
+    - `make install`
+    - `make lint`
+
 
 ToDo
 ----
-- put project in git
-- figure out how to run eslint with my plugin
+- look into eslint-plugin-jsx-a11y for possible techniques/ideas
 
 - identify a plain string
 - distinguish between plain string and string in message
@@ -65,5 +88,8 @@ ToDo
 ### Doneyard
 
 DONE: set up skeleton eslint plugin and rule
+
+- DONE: put project in git
+- DONE: figure out how to run eslint with my plugin
 
 ---
