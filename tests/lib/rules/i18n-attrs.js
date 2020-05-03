@@ -1,5 +1,5 @@
 /**
- * @fileoverview Requires that strings be wrapped for internationalization by react-intl
+ * @fileoverview Requires HTML attributes that are shown to the user to be wrapped for internationalization by react-intl
  * @author Ben Holt
  */
 "use strict";
@@ -8,9 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/intl-strings"),
-
-    RuleTester = require("eslint").RuleTester;
+var rule = require("../../../lib/rules/i18n-attrs");
+var RuleTester = require("eslint").RuleTester;
 
 
 //------------------------------------------------------------------------------
@@ -18,7 +17,7 @@ var rule = require("../../../lib/rules/intl-strings"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("intl-strings", rule, {
+ruleTester.run("i18n-attrs", rule, {
 
     valid: [
 

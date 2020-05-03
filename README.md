@@ -82,6 +82,9 @@ ToDo
 - identify more distinguishing criteria
     - css class name strings
 
+- eslint-disable-next-line doesn't seem to work (at least with intl/no-bare-text)
+    - eslint-disable-line works only if it comes before bare text :-/
+
 ### Doneyard
 
 DONE: set up skeleton eslint plugin and rule
